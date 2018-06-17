@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Auto Complete";
+}
+
+<div class="container">
+    <h2>Autocomplete textbox in Angular.JS</h2>
+    <div ng-app="myapp">
+        <div ng-controller="AutoCompleteController">
+            <!--<div >Paises: {{Countries}}</div>-->
+            <div angucomplete-alt id="txtAutoComplete" placeholder="Ingrese el pais" pause="100"
+                              selected-object="SelectedCountry" local-data="Countries" search-fields="CountryName"
+                              title-field="CountryName" minlength="1" input-class="form-control" match-class="highlight">
+            </div>
+            <div ng-show="SelectedCountry">
+                Selected Country: {{SelectedCountry.CountryName}}
+            </div>
+        </div>
+    </div>
+</div>
+
